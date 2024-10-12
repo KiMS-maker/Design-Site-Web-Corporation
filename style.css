@@ -1,0 +1,70 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns:1fr;
+
+    gap: 10px;
+   
+}
+
+.image-gallery img {
+    width: 100vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol : zoom et ombre */
+.image-gallery img:hover {
+    transform: scale(1.1); /* Zoom de l'image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Renforce l'ombre */
+}
+
+/* Animation au chargement de la page */
+.image-gallery img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
